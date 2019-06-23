@@ -19,7 +19,19 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('select2css')
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">  
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+{{ Html::style(url('css/theme.css')) }}
+{{ Html::style(url('css/theme-elements.css')) }}
+{{ Html::style(url('css/skins/default.css')) }}
+{{ Html::style(url('css/custom.css')) }}
+{{ Html::style(url("/css/fonts.googleapis.css"), ['rel' => 'stylesheet', 'type' => 'text/css']) }}
+{{ Html::style(url('vendor/bootstrap/css/bootstrap.min.css')) }}
+{{ Html::style(url('vendor/animate/animate.css')) }}
+{{ Html::style(url('vendor/font-awesome/css/fontawesome-all.min.css')) }}
+{{ Html::style(url('vendor/magnific-popup/magnific-popup.css')) }}
+{{ Html::style(url('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')) }}
+{{ Html::style(url("assets/nextbyte/plugins/jquery-ui/css/jquery-ui.min.css"), ['rel' => 'stylesheet']) }}
+{{ Html::style(url("vendor/pnotify/pnotify.custom.css"), ['rel' => 'stylesheet']) }}
 
     <!-- Hover CSS -->
     <link href="{{ asset('css/hover-min.css') }}" rel="stylesheet">
@@ -46,7 +58,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
     <script src="{{asset('js/script.js')}}"></script>
+    {!! Html::script(url('js/theme.js')) !!}
+    {!! Html::script(url('js/custom.js')) !!}
+    {!! Html::script(url('js/theme.init.js')) !!}
+    {!! Html::script(url('vendor/select2/js/select2.min.js')) !!}
+    {!! Html::script(url('js/share.js')) !!}
 
+
+    {!! Html::script(url('vendor/jquery/jquery.js')) !!}
+    {!! Html::script(url('assets/nextbyte/plugins/jquery-ui/js/jquery-ui.min.js')) !!}
+    {!! Html::script(url('vendor/jquery-browser-mobile/jquery.browser.mobile.js')) !!}
+    {!! Html::script(url('vendor/popper/umd/popper.min.js')) !!}
+    {!! Html::script(url('vendor/bootstrap/js/bootstrap.min.js')) !!}
+    {!! Html::script(url('vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js')) !!}
+    {!! Html::script(url('vendor/common/common.js')) !!}
+    {!! Html::script(url('vendor/nanoscroller/nanoscroller.js')) !!}
+    {!! Html::script(url('vendor/magnific-popup/jquery.magnific-popup.min.js')) !!}
+    {!! Html::script(url('vendor/jquery-placeholder/jquery-placeholder.js')) !!}
+    {!! Html::script(url('vendor/pnotify/pnotify.custom.js')) !!}
+    {!! Html::script(url('vendor/socket/js/socket.io.min.js')) !!}
     <!-- toastr JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </body>

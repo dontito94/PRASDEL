@@ -23,10 +23,15 @@ Route::get('/', 'PageController@index');
 
 Route::resource('/jobs', 'JobController');
 
+Route::get('/jobs', 'JobController@index')->name('jobs.all');
+
+Route::get('/jobs/create', 'JobController@create')->name('jobs.create');
+
+
 
 // Freelancer Controller
 
-Route::get('/userdashboard', 'FreelancerController@index');
+Route::get('/userdashboard', 'FreelancerController@index')->name('userdashboard');
 
 Route::post('/profile/store', 'FreelancerController@storeProfile');
 
@@ -38,7 +43,7 @@ Route::post('/profile/updatephoto', 'FreelancerController@updatePhoto');
 
 Route::get('/profile/{name}', 'FreelancerController@profile');
 
-Route::get('/my-jobs', 'FreelancerController@myJobs');
+Route::get('/my-jobs', 'FreelancerController@myJobs')->name('myjobs');
 
 
 // Skill Controller
@@ -57,7 +62,7 @@ Route::post('/profile/education/delete', 'EducationController@deleteEducation');
 
 // Client Controller
 
-Route::get('/dashboard', 'ClientController@dashboard');
+Route::get('/dashboard', 'ClientController@dashboard')->name('client.dashboard');
 
 Route::get('/shortlist/{id}', 'ClientController@shortlist');
 

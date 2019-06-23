@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('title')
-    iConnect - Hire Freelancers &amp; Find Freelance Jobs Online
+    Prasdel - Hire Candidate &amp; Find Pratical Training Jobs Online
 @endsection
 
 @section('content')
      <div class="jumbotron">
         <div class="mx-auto align-middle jumbotron-content">
             <div>
-              <h1 class="display-4 h1">Find The Job That Fits Your Skills</h1>
+              <h1 class="display-4 h1">Find The Practica Training That Fits Your Skills</h1>
               <form action="/userdashboard" method="get">
                 <div class="input-group mb-3 w-50">
                   <input type="text" class="form-control" placeholder="Search Jobs" aria-label="Amount (rounded to the nearest dollar)" aria-describedby="basic-addon" name="search">
@@ -71,4 +71,27 @@
             <img src="/storage/assets/freelancervector.jpg" class="img-fluid">
         </div>
     </section>
+     <section class="card card-featured-left card-featured-primary mb-3">
+         <div class="card-body">
+             <div class="widget-summary">
+                 <div class="widget-summary-col widget-summary-col-icon">
+                     <div class="summary-icon bg-primary">
+                         <i class="fas fa-life-ring"></i>
+                     </div>
+                 </div>
+                 <div class="widget-summary-col">
+                     <div class="summary">
+                         <h4 class="title">Support Questions</h4>
+                         <div class="info">
+                             <strong class="amount">1281</strong>
+                             <span class="text-primary">(14 unread)</span>
+                         </div>
+                     </div>
+                     <div class="summary-footer">
+                         <a class="text-muted text-uppercase" href="#">(view all)</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
 @endsection

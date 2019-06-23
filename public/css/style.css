@@ -60,7 +60,7 @@ img#mylogo {
 */
 
 .jumbotron {
-	background-image: url(/storage/assets/jumbotron.jpg);
+	background-image: url(/img/banner1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
