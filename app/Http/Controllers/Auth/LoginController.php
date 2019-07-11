@@ -30,7 +30,7 @@ class LoginController extends Controller
     protected function redirectPath()
     {
       if (Auth::user()->role==1) {
-        return ('/userdashboard');
+        return url('profile',str_slug(strtolower(Auth::user()->name), '-'));
       } else if (Auth::user()->role==2){
         return '/jobs';
       } else if (Auth::user()->role==3) {

@@ -82,8 +82,18 @@ class FreelancerController extends Controller
                     ->get();
         $works = Work::where('user_id', $user->id)
                     ->orderBy('created_at', 'desc')
-                    ->get(); 
-        return view('freelancer.profile', compact('user', 'profile', 'skills', 'educations', 'works'));
+                    ->get();
+
+        $id = Auth()->user()->id;
+        $user = User::find($id);
+        $jobs = DB::table('applicants')
+            ->join('jobs', 'applicants.job_id', '=', 'jobs.id')
+            ->when($id, function ($query) use ($id) {
+                return $query->where('applicants.user_id', $id);
+            })
+            ->orderBy('applicants.created_at', 'desc')
+            ->get();
+        return view('freelancer.profile', compact('user', 'profile', 'skills', 'educations', 'works','jobs'));
     }
 
     public function storeProfile(Request $request) {

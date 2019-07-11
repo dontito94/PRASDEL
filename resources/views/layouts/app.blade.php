@@ -65,19 +65,7 @@
     {!! Html::script(url('js/share.js')) !!}
 
 
-    {!! Html::script(url('vendor/jquery/jquery.js')) !!}
-    {!! Html::script(url('assets/nextbyte/plugins/jquery-ui/js/jquery-ui.min.js')) !!}
-    {!! Html::script(url('vendor/jquery-browser-mobile/jquery.browser.mobile.js')) !!}
-    {!! Html::script(url('vendor/popper/umd/popper.min.js')) !!}
-    {!! Html::script(url('vendor/bootstrap/js/bootstrap.min.js')) !!}
-    {!! Html::script(url('vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js')) !!}
-    {!! Html::script(url('vendor/common/common.js')) !!}
-    {!! Html::script(url('vendor/nanoscroller/nanoscroller.js')) !!}
-    {!! Html::script(url('vendor/magnific-popup/jquery.magnific-popup.min.js')) !!}
-    {!! Html::script(url('vendor/jquery-placeholder/jquery-placeholder.js')) !!}
-    {!! Html::script(url('vendor/pnotify/pnotify.custom.js')) !!}
-    {!! Html::script(url('vendor/socket/js/socket.io.min.js')) !!}
-    <!-- toastr JS -->
+    <!- toastr JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </body>
 </html>

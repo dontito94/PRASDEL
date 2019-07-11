@@ -169,4 +169,60 @@ class JobController extends Controller
 
         $job->delete();
     }
+
+
+//    get all jobs
+      public function allJobs(Request $request)
+      {
+
+
+          $jobs = Job::all();
+          $categories = JobCategory::all();
+
+          $cat = $request->input('cat');
+          $search = $request->input('search');
+
+
+          if($request->has('cat') && $cat != 'all') {
+              if($request->has('search') && $search != null) {
+                  $jobs = Job::where('category_id', $cat)
+                      ->where(function ($query) use ($search) {
+                          $query->where('title', 'like', '%'.$search.'%')
+                              ->orWhere('body', 'like', '%'.$search.'%');
+                      })->orderBy('created_at', 'desc')
+                      ->paginate(5)
+                      ->appends([
+                          'cat' => request('cat'),
+                          'search' => request('search')
+                      ]);
+              } else {
+                  $jobs = Job::where('category_id', $cat)
+                      ->orderBy('created_at', 'desc')
+                      ->paginate(5)
+                      ->appends([
+                          'cat' => request('cat')
+                      ]);
+              }
+          } else {
+              $jobs = Job::where('title', 'like', '%'.$search.'%')
+                  ->orWhere('body', 'like', '%'.$search.'%')
+                  ->orderby('created_at', 'desc')
+                  ->paginate(5)
+                  ->appends([
+                      'search' => request('search')
+                  ]);
+          }
+          return view('jobpost.all_jobs')
+              ->with('jobs',$jobs)
+              ->with('categories',$categories)
+              ->with('cat',$cat)
+              ->with('search',$search);
+      }
+
+
+
+
+
+
+
 }

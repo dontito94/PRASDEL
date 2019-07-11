@@ -16,7 +16,7 @@ Auth::routes();
 
 // Page Controller
 
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index',['except' => ['show']]);
 
 
 // Job Controller
@@ -26,6 +26,9 @@ Route::resource('/jobs', 'JobController');
 Route::get('/jobs', 'JobController@index')->name('jobs.all');
 
 Route::get('/jobs/create', 'JobController@create')->name('jobs.create');
+
+Route::get('/job/job_list', 'JobController@allJobs')->name('jobs.job_list');
+
 
 
 
@@ -56,7 +59,7 @@ Route::post('/profile/skills/edit', 'SkillController@editSkill');
 
 Route::post('/profile/education/store', 'EducationController@storeEducation');
 
-Route::post('/profile/education/update', 'EducationController@updateEducation');
+Route::post('/profile/education/update', 'EducationController@updateEducation')->name('profile.education.update');
 
 Route::post('/profile/education/delete', 'EducationController@deleteEducation');
 
@@ -112,3 +115,8 @@ Route::post('/panel/categories/add', 'AdminController@addCategories');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//resources pages
+
+Route::get('/about','PageController@aboutUs')->name('about_us');

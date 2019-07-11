@@ -42,7 +42,8 @@ class EducationController extends Controller
     	$new_education->save();
     }
 
-    public function updateEducation(Request $request) {    	
+    public function updateEducation(Request $request) {
+
      	$id = $request->id;
     	$education = Education::find($id);
     	$education->course = $request->course;

@@ -341,7 +341,7 @@
                  <ul class="list-unstyled">
                      <li class="divider"></li>
                      <li>
-                         <a role="menuitem" tabindex="-1" href="/profile/{{str_slug(strtolower(Auth::user()->name), '-')}}"><i class="fas fa-user"></i> @lang('label.my_profile')</a>
+                         <a role="menuitem" tabindex="-1" href="profile/{{str_slug(strtolower(Auth::user()->name), '-')}}"><i class="fas fa-user"></i> @lang('label.my_profile')</a>
                      </li>
                      <li>
                          {!! Form::open(['route' => 'logout', 'id' => 'logout-form']) !!}

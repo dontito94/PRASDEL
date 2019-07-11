@@ -1,62 +1,76 @@
-<footer class="pt-5">
+<!-- Footer -->
+<div class="section footer transparent" style="background-color: black">
 	<div class="container">
-		<div class="row">
-			<div class="col-sm">
-				<h5 class="h5 text-white">Navigate</h5>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Sign Up</a></li>
-					<li><a href="#">How it works</a></li>
+		<div class="top flex space-between items-center">
+			<img src="{!! url('img/LOGO.png') !!}" width="200" height="45" alt="footer-logo" class="img-responsive">
+			<ul class="list-unstyled footer-menu flex">
+				<li><a href="#0">Home</a></li>
+				<li><a href="#0">About</a></li>
+				<li><a href="#0">Browse Jobs</a></li>
+				<li><a href="#0">Browse candidates</a></li>
+				<li><a href="#0">Contact</a></li>
+			</ul> <!-- end .footer-menu -->
+		</div> <!-- end .top -->
+		<div class="footer-widgets flex no-column space-between">
+			<div class="widget">
+				<h6>About</h6>
+				<ul class="list-unstyled">
+					<li><a href="#0">Company</a></li>
+					<li><a href="#0">Our Partners</a></li>
+					<li><a href="#0">Blog</a></li>
+					<li><a href="#0">FAQ</a></li>
+					<li><a href="#0">Pricing</a></li>
+					<li><a href="#0">Help Center</a></li>
+					<li><a href="#0">Team</a></li>
+					<li><a href="#0">Contact Us</a></li>
 				</ul>
-			</div>
-			<div class="col-sm">
-				<h5 class="h5 text-white">Categories</h5>
-				<ul>
-					<li><a href="#">Graphics &amp; Design</a></li>
-					<li><a href="#">Programming &amp; Tech</a></li>
-					<li><a href="#">Digital Marketing</a></li>
-					<li><a href="#">Writing &amp; Translation</a></li>
-					<li><a href="#">Video &amp; Animation</a></li>
-					<li><a href="#">Admin Support</a></li>
-					<li><a href="#">Architecture &amp; Engineering</a></li>
-					<li><a href="#">Management &amp; Finance</a></li>
+			</div> <!-- end .widget -->
+			<div class="widget">
+				<h6>For candidates</h6>
+				<ul class="list-unstyled">
+					<li><a href="#0">Browse Jobs</a></li>
+					<li><a href="#0">Browse categories</a></li>
+					<li><a href="#0">Submit Resume</a></li>
+					<li><a href="#0">Candidate Dashboard</a></li>
+					<li><a href="#0">Job Alerts</a></li>
+					<li><a href="#0">My Bookmarks</a></li>
 				</ul>
-			</div>
-			<div class="col-sm">
-				<h5 class="h5 text-white">Company Info</h5>
-				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Support</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of Service</a></li>
-					<li><a href="#">Disclaimer</a></li>
+			</div> <!-- end .widget -->
+			<div class="widget">
+				<h6>For companies</h6>
+				<ul class="list-unstyled">
+					<li><a href="#0">Browse Candidates</a></li>
+					<li><a href="#0">Company Dashboard</a></li>
+					<li><a href="#0">Add A Job</a></li>
+					<li><a href="#0">Packages</a></li>
 				</ul>
-			</div>
-			<div class="col-sm">
-				<h5 class="h5 text-white">Community</h5>
-				<ul>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Forum</a></li>
-					<li><a href="#">Affiliates</a></li>
+			</div> <!-- end .widget -->
+			<div class="widget">
+				<h6>Follow us</h6>
+				<ul class="list-unstyled social-icons flex no-column">
+					<li><a href="#0"><i class="ion-social-twitter"></i></a></li>
+					<li><a href="#0"><i class="ion-social-facebook"></i></a></li>
+					<li><a href="#0"><i class="ion-social-youtube"></i></a></li>
+					<li><a href="#0"><i class="ion-social-instagram"></i></a></li>
+					<li><a href="#0"><i class="ion-social-linkedin"></i></a></li>
 				</ul>
-			</div>
-		</div>
-		<div class="row mt-5">
-			<div class="col footer">
-				<div class="col-sm copyright">
-					<h6 class="h6">© 2018 iConnect.ml. All rights reserved</h6>
-				</div>
-				<div class="col-sm socialicons">
-					<i class="px-1 fab fa-facebook fa-3x"></i>
-					<i class="px-1 fab fa-twitter-square fa-3x"></i>
-					<i class="px-1 fab fa-instagram fa-3x"></i>
-					<i class="px-1 fab fa-google-plus-g fa-3x"></i>
-					<i class="px-1 fab fa-linkedin fa-3x"></i>
-					<i class="px-1 fab fa-pinterest-square fa-3x"></i>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+				<h6>Subscribe Us</h6>
+				<p>Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor vitae augue.</p>
+				<form class="form-inline subscribe-form flex no-column no-wrap items-center">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Your email">
+					</div> <!-- end .form-group -->
+					<button type="submit" class="button"><i class="ion-ios-arrow-thin-right"></i></button>
+				</form>
+			</div> <!-- end .widget -->
+		</div> <!-- end .footer-widgets -->
+		<div class="bottom flex space-between items-center">
+			<p class="copyright-text small">&copy; 2017 <a href="#0">JobPress</a>. All Rights Reserved. Designed by <a href="#0">LeoStudo</a>.</p>
+			<ul class="list-unstyled copyright-menu flex no-column">
+				<li><a href="#0">Privacy policy</a></li>
+				<li><a href="#0">Terms of service</a></li>
+				<li><a href="#0">Conditions</a></li>
+			</ul> <!-- end .copyright-menu -->
+		</div> <!-- end .bottom -->
+	</div> <!-- end .container -->
+</div> <!-- end .footer -->
