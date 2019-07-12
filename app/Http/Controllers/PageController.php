@@ -60,4 +60,16 @@ class PageController extends Controller
         return view('pages.about_us');
     }
 
+    //welcome company
+    public function  welcomeCompany()
+    {
+        return view('client.company_welcome');
+    }
+
+    //welcome candidate
+    public function welcomeCandidate()
+    {
+        return view('freelancer.candidate_welcome');
+    }
+
 }

@@ -48,6 +48,8 @@ Route::get('/profile/{name}', 'FreelancerController@profile');
 
 Route::get('/my-jobs', 'FreelancerController@myJobs')->name('myjobs');
 
+Route::get('/candidate','PageController@welcomeCandidate')->name('candidate');
+
 
 // Skill Controller
 
@@ -75,6 +77,7 @@ Route::get('/proposal/{id}/{user}/hire', 'ClientController@hire');
 
 Route::get('/proposal/{id}/{user}/reject', 'ClientController@reject');
 
+Route::get('/compant','PageController@welcomeCompany')->name('company');
 // Work Controller
 
 Route::post('/profile/work/store', 'WorkController@storeWork');

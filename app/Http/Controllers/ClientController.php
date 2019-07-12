@@ -101,6 +101,8 @@ class ClientController extends Controller
             ->update(['status' => 'rejected']);
 
         return redirect('jobs');
-    }  
+    }
+
+
 
 }

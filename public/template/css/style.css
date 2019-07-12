@@ -550,7 +550,7 @@ select::-ms-expand {
 
 .header {
 	position: relative;
-	background: #fff;
+	background: #000;
 }
 .header-inner {
 	font-size: 0;

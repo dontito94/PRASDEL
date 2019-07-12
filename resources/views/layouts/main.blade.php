@@ -62,8 +62,16 @@
                                 @guest
                                 <li class="active"><a href="{!! url('/') !!}">Home</a></li>
                                 <li><a href="{!! route('about_us') !!}">About</a></li>
-                                <li><a href="#">Candidate</a></li>
-                                <li><a href="#">Company</a></li>
+                                <li><a href="{!! route('candidate') !!}">Candidate</a></li>
+                                <li><a href="{!! route('company') !!}">Company</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#0">Support</a>
+                                    <ul>
+                                        <li><a href="#">Help Tabs</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Pricing plans</a></li>
+                                    </ul>
+                                </li>
 
                                 @else
 
